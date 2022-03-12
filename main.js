@@ -194,3 +194,15 @@ let counter = setInterval(() => {
     clearInterval(counter);
   }
 }, 1000);
+
+let registerform = document.querySelector("#registerform");
+let password = registerform.querySelector("#r-password");
+    confirmpassword = registerform.querySelector("#r-confirmPassword");
+    password.addEventListener("input", (e) =>{
+     if(password.value.trim().length >= 10){
+      confirmpassword.removeAttribute("disabled")
+     }
+     else{
+      confirmpassword.setAttribute("disabled", "disabled");
+     }
+    })
